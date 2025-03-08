@@ -36,7 +36,7 @@ h2 {
 /* Asegurar que todas las imágenes de las cards tengan el mismo tamaño */
 .card-img-top {
     width: 100%;
-    height: 200px; /* Altura fija para todas las imágenes */
+    height: 300px; /* Altura fija para todas las imágenes */
     object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
 }
 
@@ -58,9 +58,21 @@ h2 {
 .btn-warning {
     background-color: #e83e8c; /* Rosado para el botón de "Editar" */
     border-color: #e83e8c;
+    color: white;
 }
 
 .btn-warning:hover {
+    background-color: #d6336c; /* Rosado más oscuro al pasar el ratón */
+    border-color: #d6336c;
+}
+
+.btn-secondary {
+    background-color: #e83e8c; /* Rosado para el botón de "Editar" */
+    border-color: #e83e8c;
+    color: white;
+}
+
+.btn-secondary:hover {
     background-color: #d6336c; /* Rosado más oscuro al pasar el ratón */
     border-color: #d6336c;
 }
@@ -127,7 +139,7 @@ footer {
 }
 
 #navbar {
-    background-color: #a18cc9;
+    background-color: #a18cc9 !important;
     width: 100%; /* Asegura que ocupe todo el ancho */
     position: fixed; /* Pegado arriba */
     top: 0; /* Se queda arriba */
@@ -173,9 +185,9 @@ html, body {
 }
 
 /* Anclar el footer en la parte inferior */
-footer {
+#footer {
     background-color: #a18cc9 !important;
-    color: #000000; /* Color negro para el texto */
+    color: #000000 !important; /* Color negro para el texto */
     font-weight: bold;
     padding: 20px;
     text-align: center;

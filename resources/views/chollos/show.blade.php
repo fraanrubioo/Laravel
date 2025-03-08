@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
-    <title>Chollo Severo</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/show.css') }}">
-</head>
-<body>
+@extends('layouts.app')
 
+@section('title', $chollo->titulo . ' - Chollo Severo')
+
+@section('content')
     <div class="container">
         <h1>{{ $chollo->titulo }}</h1>
+
         <!-- Verificación de la existencia de la imagen -->
         @php
             $extensions = ['jpg', 'png', 'webp'];
@@ -30,18 +24,46 @@
         @else
             <img src="{{ asset('images/default-image.png') }}" class="card-img-top" alt="Imagen por defecto">
         @endif
-        <p><strong>Categoría:</strong> {{ $chollo->categoria }}</p>
-        <p><strong>Precio original:</strong> €{{ number_format($chollo->precio, 2) }}</p>
-        <p><strong>Precio con descuento:</strong> €{{ number_format($chollo->precio_descuento, 2) }}</p>
-        <p><strong>Descripción:</strong> {{ $chollo->descripcion }}</p>
-        <p><strong>Puntuación:</strong> {{ $chollo->puntuacion }}</p>
-        <p><strong>Disponible:</strong> {{ $chollo->disponible ? 'Sí' : 'No' }}</p>
-        <p><strong>URL:</strong> <a href="{{ $chollo->url }}" target="_blank">{{ $chollo->url }}</a></p>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Categoría:</strong> {{ $chollo->categoria }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Precio original:</strong> €{{ number_format($chollo->precio, 2) }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Precio con descuento:</strong> €{{ number_format($chollo->precio_descuento, 2) }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Descripción:</strong> {{ $chollo->descripcion }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Puntuación:</strong> {{ $chollo->puntuacion }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>Disponible:</strong> {{ $chollo->disponible ? 'Sí' : 'No' }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p><strong>URL:</strong> <a href="{{ $chollo->url }}" target="_blank">{{ $chollo->url }}</a></p>
+                </div>
+            </div>
+        </div>
+
         
         <a href="{{ url('/') }}" class="btn btn-secondary">Volver al listado</a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+@endsection
