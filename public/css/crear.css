@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8c6d4; /* Fondo rosado */
+    color: #000; /* Color de texto negro */
+}
+
+/* Cabecera */
+h2 {
+    color: #000000; /* Morado para los títulos */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el formulario */
+.container {
+    padding: 10px;
+    margin-top: 30px;
+    max-width: 800px; /* Ajusta el tamaño del contenedor */
+    margin-bottom: 30px !important;
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #000; /* Morado para las etiquetas */
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* Bordes suaves */
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: #6f42c1; /* Morado en el borde al enfocar */
+    box-shadow: 0 0 5px rgba(111, 66, 193, 0.5); /* Efecto de foco */
+}
+
+button[type="submit"] {
+    background-color: #6f42c1; /* Morado para el botón */
+    border-color: #6f42c1;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a2e99; /* Morado más oscuro al pasar el ratón */
+    border-color: #5a2e99;
+}
+
+a.btn-secondary {
+    background-color: #e83e8c; /* Rosado para el botón de "Volver" */
+    border-color: #e83e8c;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a.btn-secondary:hover {
+    background-color: #d6336c; /* Rosado más oscuro al pasar el ratón */
+    border-color: #d6336c;
+}
+
+.alert-danger {
+    background-color: #f8d7da; /* Fondo rosado claro para el mensaje de error */
+    border-color: #f5c6cb; /* Bordes rojos */
+    color: #721c24; /* Texto rojo */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-danger ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alert-danger ul li {
+    list-style-type: none;
+}
+

@@ -1,11 +1,184 @@
-html, body {
-    height: 100%;
-    margin: 0;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8c6d4; /* Fondo rosado */
+    color: #000; /* Color de texto negro */
 }
 
+/* Cabecera y barra de navegación */
+nav .nav-link {
+    color: #000000; /* Morado para los enlaces */
+    font-weight: bold;
+}
+
+nav .nav-link:hover {
+    color: #e83e8c; /* Color rosado para hover */
+}
+
+h2 {
+    color: #000000; /* Morado para los títulos */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor de las cards */
+.card {
+    border: 1px solid #e0e0e0; /* Bordes suaves para las cards */
+    border-radius: 8px;
+    overflow: hidden; /* Para que las imágenes no se desborden */
+    transition: transform 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra al pasar el ratón */
+}
+
+/* Asegurar que todas las imágenes de las cards tengan el mismo tamaño */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+}
+
+/* Estilo de los botones */
+.btn {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #6f42c1; /* Morado para el botón de "Ver más" */
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #5a2e99; /* Morado más oscuro al pasar el ratón */
+    border-color: #5a2e99;
+}
+
+.btn-warning {
+    background-color: #e83e8c; /* Rosado para el botón de "Editar" */
+    border-color: #e83e8c;
+}
+
+.btn-warning:hover {
+    background-color: #d6336c; /* Rosado más oscuro al pasar el ratón */
+    border-color: #d6336c;
+}
+
+.btn-danger {
+    background-color: #dc3545; /* Rojo para el botón de "Eliminar" */
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+    border-color: #c82333;
+}
+
+/* Footer */
+footer {
+    background-color: #a18cc9 !important;
+    color: #000000; /* Color blanco para el texto */
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Ajustes para el formulario de búsqueda */
+.container {
+    max-width: 1400px; /* Limita el tamaño máximo para un diseño más bonito */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000000; /* Morado para los títulos dentro de las cards */
+}
+
+.card-text {
+    color: #000; /* Color negro para la descripción */
+}
+
+/* Estilo para la imagen de logo */
+img.img-fluid {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Footer */
 footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 100px !important;
+}
+
+#navbar {
+    background-color: #a18cc9;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    position: fixed; /* Pegado arriba */
+    top: 0; /* Se queda arriba */
+    left: 0; /* Se extiende desde la izquierda */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 10px 0; /* Ajusta el espacio dentro del navbar */
+    margin: 0; /* Eliminar cualquier margen por defecto */
+}
+
+#navbar .container {
+    width: 100%; /* Asegura que el contenedor también ocupe todo el ancho */
+    padding: 0; /* Eliminar el padding del contenedor */
+}
+
+body {
+    padding-top: 60px; /* Para que el contenido no quede cubierto por el navbar fijo */
+}
+
+/* Asegúrate de que los enlaces dentro del navbar no tengan márgenes */
+nav .nav-link {
+    color: #000000;
+    font-weight: bold;
+    margin-right: 0; /* Eliminar márgenes entre los enlaces */
+}
+
+/* Elimina márgenes por defecto de los elementos dentro del navbar */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* Asegurar que html y body ocupen el 100% de la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hacer que el contenedor principal ocupe todo el espacio disponible */
+.container {
+    flex: 1;
+}
+
+/* Anclar el footer en la parte inferior */
+footer {
+    background-color: #a18cc9 !important;
+    color: #000000; /* Color negro para el texto */
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
 }

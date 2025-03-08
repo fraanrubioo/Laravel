@@ -100,4 +100,24 @@ class CholloController extends Controller
         // Redirigir a la lista de chollos o a una página de éxito
         return redirect()->route('chollos.index')->with('success', 'Chollo actualizado correctamente');
     }
+
+    public function destroy($id)
+    {
+        // Encontrar el chollo por su ID
+        $chollo = Chollo::findOrFail($id);
+
+        // Eliminar el chollo
+        $chollo->delete();
+
+        // Redirigir con un mensaje de éxito
+        return redirect()->route('chollos.index')->with('success', 'Chollo eliminado con éxito.');
+    }
+
+        public function destacados()
+    {
+        $chollos = Chollo::where('puntuacion', 5)->get();
+        return view('chollos.destacados', compact('chollos')); // Asegúrate de incluir 'chollos.'
+    }
+
+    
 }

@@ -13,3 +13,5 @@ Route::get('/chollos/create', [CholloController::class, 'create'])->name('chollo
 Route::resource('chollos', CholloController::class);
 
 Route::put('/chollos/{chollo}', [CholloController::class, 'update'])->name('chollos.update');
+
+Route::get('/destacados', [CholloController::class, 'destacados'])->name('chollos.destacados');
