@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi aplicación</title>
+    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+    <title>Chollo Severo</title>
 </head>
 <body>
     <div>
